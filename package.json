@@ -1,0 +1,63 @@
+{
+  "name": "watch",
+  "version": "1.0.0",
+  "description": "Интернет-магазин часов",
+  "scripts": {
+    "editorconfig": "editorconfig-cli",
+    "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
+    "eslint": "eslint js/",
+    "test": "npm run editorconfig && npm run stylelint && npm run eslint",
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "devDependencies": {
+    "@babel/core": "7.5.5",
+    "@babel/preset-env": "7.5.5",
+    "@htmlacademy/editorconfig-cli": "^1.0.0",
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
+    "del": "^5.0.0",
+    "eslint": "^6.2.1",
+    "eslint-config-htmlacademy": "^0.5.2",
+    "gulp": "^4.0.2",
+    "gulp-better-rollup": "^4.0.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-posthtml": "^3.0.4",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgstore": "^7.0.1",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1",
+    "posthtml-include": "^1.2.0",
+    "rollup": "^1.19.4",
+    "rollup-plugin-babel": "4.3.3",
+    "rollup-plugin-commonjs": "^10.0.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "stylelint": "^10.1.0",
+    "stylelint-config-htmlacademy": "^0.1.4"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "source/*.html",
+    "source/js/**/*.js",
+    "source/img/**/*.svg",
+    "source/sass/**/*.{sass,scss}"
+  ],
+  "engines": {
+    "node": "10"
+  },
+  "dependencies": {
+    "babel-polyfill": "6.26.0"
+  }
+}
