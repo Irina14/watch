@@ -1,0 +1,53 @@
+@mixin container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin title($font-size, $line-height, $color) {
+  margin: 0;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: 700;
+  color: $color;
+}
+
+@mixin reset-button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@mixin text($font-size, $line-height, $color) {
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin button {
+  @include text(18px, 24px, #c2529a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 57px;
+  font-weight: 700;
+  background-color: $white;
+  border-radius: 28px;
+  border: none;
+  box-shadow: 2px 2px 27px 0 #ffffff;
+  transition: all 0.5s linear;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background-color: #c2529a;
+  }
+}

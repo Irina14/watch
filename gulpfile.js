@@ -1,26 +1,26 @@
 "use strict";
 
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var rename = require("gulp-rename");
-var sass = require("gulp-sass");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var csso = require("gulp-csso");
-var imagemin = require("gulp-imagemin");
-var webp = require("gulp-webp");
-var svgstore = require("gulp-svgstore");
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
-var htmlmin = require("gulp-htmlmin");
-var uglify = require("gulp-uglify");
-var del = require("del");
-var server = require("browser-sync").create();
-var rollup = require('gulp-better-rollup');
-var sourcemaps = require('gulp-sourcemaps');
-var babel = require('rollup-plugin-babel');
-var resolve = require('rollup-plugin-node-resolve');
-var commonjs = require('rollup-plugin-commonjs');
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const rename = require("gulp-rename");
+const sass = require("gulp-sass");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const csso = require("gulp-csso");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
+const svgstore = require("gulp-svgstore");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
+const htmlmin = require("gulp-htmlmin");
+const uglify = require("gulp-uglify");
+const del = require("del");
+const server = require("browser-sync").create();
+const rollup = require('gulp-better-rollup');
+const sourcemaps = require('gulp-sourcemaps');
+const babel = require('rollup-plugin-babel');
+const resolve = require('rollup-plugin-node-resolve');
+const commonjs = require('rollup-plugin-commonjs');
 
 gulp.task("clean", function () {
   return del("build");
@@ -30,7 +30,7 @@ gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/js/**"
+    "source/js/script.js"
   ], {
       base: "source"
     })
