@@ -1,0 +1,40 @@
+.menu-site__toggle {
+  @include reset-button;
+  display: none;
+  position: relative;
+  width: 20px;
+  height: 18px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 18px;
+    background: url("../../img/menu.svg") no-repeat;
+  }
+}
+
+.menu-site__list {
+  @include reset-list;
+  font-family: $roboto;
+  color: $grey;
+}
+
+.menu-site__link {
+  color: $grey;
+}
+
+.header--index .menu-site {
+  order: -1;
+}
+
+.header--index .menu-site__toggle {
+  display: block;
+  margin-right: 20px;
+}
+
+.header--index .menu-site__list {
+  display: none;
+}

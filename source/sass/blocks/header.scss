@@ -1,0 +1,23 @@
+.header {
+  @include padding-desktop;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-image {
+  width: 104px;
+  height: 26px;
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    @include padding-mobile;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
