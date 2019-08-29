@@ -10,8 +10,8 @@
 }
 
 .header__logo-image {
-  width: 104px;
-  height: 26px;
+  width: 125px;
+  height: 31px;
 }
 
 @media (max-width: $tablet-width) {
@@ -19,5 +19,10 @@
     @include padding-mobile;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+
+  .header__logo-image {
+    width: 104px;
+    height: 26px;
   }
 }
