@@ -2,9 +2,18 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-left: auto;
 }
 
 .menu-user__item {
   margin-left: 20px;
+}
+
+.header--index .menu-user {
+  margin-left: auto;
+}
+
+@media (max-width: $tablet-width) {
+  .menu-user {
+    margin-left: auto;
+  }
 }

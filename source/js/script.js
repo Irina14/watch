@@ -1,7 +1,4 @@
 // import 'babel-polyfill';
+import menu from './menu.js';
 
-// import button from './button.js';
-// import text from './text.js';
-
-// button();
-// text();
+menu();
