@@ -1,0 +1,99 @@
+.promo {
+  background-color: $beige;
+}
+
+.promo__wrapper {
+  @include container-desktop;
+  display: flex;
+  align-items: center;
+}
+
+.promo__social {
+  margin: 0;
+  margin-right: 47px;
+}
+
+.promo__info {
+  position: relative;
+  width: 450px;
+  margin-right: 85px;
+  padding-left: 65px;
+}
+
+.promo__title {
+  @include text($playfair-display, 45px, 60px);
+  margin-bottom: 16px;
+
+  &::before {
+    @include line;
+    left: 0;
+    top: 35px;
+  }
+}
+
+.promo__subtitle {
+  @include text($playfair-display, 30px, 40px);
+  margin-bottom: 39px;
+}
+
+.promo__slogan {
+  @include text($roboto, 14px, 21px);
+  width: 260px;
+  margin-bottom: 64px;
+  font-weight: 300;
+  color: rgba(27, 26, 23, 0.82);
+}
+
+.promo__link {
+  height: 64px;
+  min-width: 205px;
+  line-height: 64px;
+  color: $white;
+  background-color: $color-btn;
+
+  &:hover,
+  &:focus {
+    background-color: $natural;
+  }
+}
+
+.promo__desc {
+  position: relative;
+}
+
+.promo_image {
+  position: relative;
+  margin-top: -90px;
+}
+
+.promo__cost,
+.promo__dia {
+  @include text($prata, 16px, 22px);
+  position: absolute;
+  padding-right: 61px;
+
+  &::before {
+    @include line;
+    top: 10px;
+  }
+}
+
+.promo__cost {
+  top: 40px;
+  left: -70px;
+  padding-right: 61px;
+
+  &::before {
+    right: 0;
+  }
+}
+
+.promo__dia {
+  bottom: 140px;
+  right: -145px;
+  padding-left: 61px;
+
+  &::before {
+    left: 0;
+  }
+}

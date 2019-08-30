@@ -1,11 +1,13 @@
+@mixin container-desktop {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
 @mixin padding-mobile {
   padding-left: 20px;
   padding-right: 20px;
-}
-
-@mixin padding-desktop {
-  padding-left: 45px;
-  padding-right: 45px;
 }
 
 @mixin reset-list {
@@ -14,13 +16,13 @@
   list-style: none;
 }
 
-@mixin title($font-size, $line-height, $color) {
-  margin: 0;
-  font-size: $font-size;
-  line-height: $line-height;
-  font-weight: 700;
-  color: $color;
-}
+// @mixin title($font-size, $line-height, $color) {
+//   margin: 0;
+//   font-size: $font-size;
+//   line-height: $line-height;
+//   font-weight: 700;
+//   color: $color;
+// }
 
 @mixin reset-button {
   padding: 0;
@@ -29,28 +31,17 @@
   cursor: pointer;
 }
 
-@mixin text($font-size, $line-height, $color) {
+@mixin text($font-family, $font-size, $line-height) {
+  margin: 0;
+  font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;
-  color: $color;
 }
 
-@mixin button {
-  @include text(18px, 24px, #c2529a);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 57px;
-  font-weight: 700;
-  background-color: $white;
-  border-radius: 28px;
-  border: none;
-  box-shadow: 2px 2px 27px 0 #ffffff;
-  transition: all 0.5s linear;
-
-  &:hover,
-  &:focus {
-    color: $white;
-    background-color: #c2529a;
-  }
+@mixin line {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: #8b8371;
 }

@@ -1,0 +1,19 @@
+.social {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20px;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.social__link:hover svg path,
+.social__link:focus svg path {
+  fill: $natural;
+}

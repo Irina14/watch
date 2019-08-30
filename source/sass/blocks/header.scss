@@ -1,13 +1,25 @@
 .header {
-  @include padding-desktop;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  position: relative;
+  background-color: $beige;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 36%;
+    width: 496px;
+    height: 768px;
+    background: url("../../img/ellipse.png") no-repeat;
+  }
 }
 
 .header__wrapper {
+  @include container-desktop;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .header__logo-image {
@@ -21,13 +33,16 @@
 
 @media (max-width: $tablet-width) {
   .header {
-    @include padding-mobile;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    &::before {
+      background: none;
+    }
   }
 
   .header__wrapper {
+    @include padding-mobile;
     justify-content: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .header__logo-image {
