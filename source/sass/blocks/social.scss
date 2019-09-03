@@ -9,7 +9,7 @@
 
 .social__item {
   &:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 10px;
   }
 }
 
@@ -17,3 +17,10 @@
 .social__link:focus svg path {
   fill: $natural;
 }
+
+@media (max-width: $tablet-width) {
+  .social {
+    display: none;
+  }
+}
+

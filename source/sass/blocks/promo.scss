@@ -5,24 +5,25 @@
 .promo__wrapper {
   @include container-desktop;
   display: flex;
-  align-items: center;
 }
 
 .promo__social {
   margin: 0;
-  margin-right: 47px;
+  margin-right: 3.5%;
+  margin-top: 257px;
 }
 
 .promo__info {
   position: relative;
   width: 450px;
-  margin-right: 85px;
+  margin-right: 6%;
+  margin-top: 147px;
   padding-left: 65px;
 }
 
 .promo__title {
   @include text($playfair-display, 45px, 60px);
-  margin-bottom: 16px;
+  margin-bottom: 7px;
 
   &::before {
     @include line;
@@ -33,13 +34,13 @@
 
 .promo__subtitle {
   @include text($playfair-display, 30px, 40px);
-  margin-bottom: 39px;
+  margin-bottom: 25px;
 }
 
 .promo__slogan {
   @include text($roboto, 14px, 21px);
   width: 260px;
-  margin-bottom: 64px;
+  margin-bottom: 60px;
   font-weight: 300;
   color: rgba(27, 26, 23, 0.82);
 }
@@ -70,7 +71,6 @@
 .promo__dia {
   @include text($prata, 16px, 22px);
   position: absolute;
-  padding-right: 61px;
 
   &::before {
     @include line;
@@ -79,7 +79,7 @@
 }
 
 .promo__cost {
-  top: 40px;
+  top: 50px;
   left: -70px;
   padding-right: 61px;
 
@@ -89,7 +89,7 @@
 }
 
 .promo__dia {
-  bottom: 140px;
+  bottom: 135px;
   right: -145px;
   padding-left: 61px;
 
@@ -97,3 +97,54 @@
     left: 0;
   }
 }
+
+@media (max-width: 1270px) {
+  .promo__dia {
+    display: none;
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .promo {
+    background-color: rgba(234, 227, 212, 0.3);
+  }
+
+  .promo__link {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 950px) {
+  .promo_image {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .promo__desc {
+    display: none;
+  }
+
+  .promo__info {
+    width: auto;
+    margin-right: 0;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  .promo__info {
+    padding-left: 0;
+  }
+
+  .promo__slogan {
+    width: auto;
+  }
+
+  .promo__title {
+    &::before {
+      display: none;
+    }
+  }
+}
+

@@ -76,6 +76,7 @@
 
 .header--index .menu-site--open .menu-site__list {
   display: block;
+  z-index: 20;
 }
 
 .header--index .menu-site--open .menu-site__toggle {
@@ -113,6 +114,7 @@
 
   .menu-site--open .menu-site__list {
     display: block;
+    z-index: 20;
   }
 
   .menu-site--open .menu-site__toggle {

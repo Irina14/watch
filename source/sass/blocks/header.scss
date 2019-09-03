@@ -31,13 +31,17 @@
   justify-content: flex-start;
 }
 
-@media (max-width: $tablet-width) {
+@media (max-width: $desktop-width) {
   .header {
+    background-color: rgba(234, 227, 212, 0.3);
+
     &::before {
-      background: none;
+      display: none;
     }
   }
+}
 
+@media (max-width: $tablet-width) {
   .header__wrapper {
     @include padding-mobile;
     justify-content: flex-start;
