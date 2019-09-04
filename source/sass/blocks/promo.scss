@@ -1,4 +1,5 @@
 .promo {
+  position: relative;
   background-color: $beige;
 }
 
@@ -15,6 +16,7 @@
 
 .promo__info {
   position: relative;
+  z-index: 20;
   width: 450px;
   margin-right: 6%;
   margin-top: 147px;
@@ -60,6 +62,7 @@
 
 .promo__desc {
   position: relative;
+  z-index: 20;
 }
 
 .promo_image {
@@ -126,6 +129,7 @@
   }
 
   .promo__info {
+    z-index: 0;
     width: auto;
     margin-right: 0;
     margin-top: 50px;

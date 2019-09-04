@@ -7,6 +7,7 @@
     content: "";
     top: 0;
     left: 36%;
+    z-index: 10;
     width: 496px;
     height: 768px;
     background: url("../../img/ellipse.png") no-repeat;
@@ -15,6 +16,7 @@
 
 .header__wrapper {
   @include container-desktop;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -27,8 +29,38 @@
   height: 31px;
 }
 
+.header__toggle {
+  @include reset-button;
+  display: none;
+  position: relative;
+  width: 22px;
+  height: 22px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    background: url("../../img/menu.svg") no-repeat;
+  }
+}
+
 .header--index .header__wrapper {
   justify-content: flex-start;
+}
+
+.header--index .header__toggle {
+  display: block;
+  order: -1;
+  margin-right: 20px;
+}
+
+.header--index .header__toggle--open {
+  &::before {
+    background: url("../../img/close.svg") no-repeat;
+  }
 }
 
 @media (max-width: $desktop-width) {
@@ -52,5 +84,17 @@
   .header__logo-image {
     width: 104px;
     height: 26px;
+  }
+
+  .header__toggle {
+    display: block;
+    order: -1;
+    margin-right: 20px;
+  }
+
+  .header__toggle--open {
+    &::before {
+      background: url("../../img/close.svg") no-repeat;
+    }
   }
 }

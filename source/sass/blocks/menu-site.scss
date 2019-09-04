@@ -2,29 +2,12 @@
   width: 60%;
 }
 
-.menu-site__toggle {
-  @include reset-button;
-  display: none;
-  position: relative;
-  width: 22px;
-  height: 22px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 22px;
-    height: 22px;
-    background: url("../../img/menu.svg") no-repeat;
-  }
-}
-
 .menu-site__list {
   @include reset-list;
   display: flex;
   justify-content: center;
   font-family: $roboto;
+  font-size: 16px;
   color: $grey;
 }
 
@@ -48,78 +31,61 @@
 }
 
 .header--index .menu-site {
-  position: relative;
-  order: -1;
+  position: absolute;
+  top: 70px;
+  left: 45px;
+  z-index: 10;
+  display: none;
   width: auto;
 }
 
-.header--index .menu-site__toggle {
-  display: block;
-  margin-right: 20px;
-}
-
 .header--index .menu-site__list {
-  position: absolute;
-  display: none;
-  top: 40px;
-  left: 0;
+  display: block;
   padding: 20px;
+  background-color: rgba($beige, 0.95);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .header--index .menu-site__item {
   &:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     margin-right: 0;
   }
 }
 
-.header--index .menu-site--open .menu-site__list {
+.header--index .menu-site--open {
   display: block;
-  z-index: 20;
-}
-
-.header--index .menu-site--open .menu-site__toggle {
-  &::before {
-    background: url("../../img/close.svg") no-repeat;
-  }
 }
 
 @media (max-width: $tablet-width) {
   .menu-site {
-    position: relative;
-    order: -1;
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    z-index: 10;
+    display: none;
     width: auto;
   }
 
-  .menu-site__toggle {
-    display: block;
-    margin-right: 20px;
+  .header--index .menu-site {
+    top: 60px;
+    left: 20px;
   }
 
   .menu-site__list {
-    position: absolute;
-    display: none;
-    top: 40px;
-    left: 0;
+    display: block;
     padding: 20px;
+    background-color: rgba($beige, 0.95);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 
   .menu-site__item {
     &:not(:last-child) {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
   }
 
-  .menu-site--open .menu-site__list {
+  .menu-site--open {
     display: block;
-    z-index: 20;
-  }
-
-  .menu-site--open .menu-site__toggle {
-    &::before {
-      background: url("../../img/close.svg") no-repeat;
-    }
   }
 }
