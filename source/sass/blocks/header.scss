@@ -15,7 +15,8 @@
 }
 
 .header__wrapper {
-  @include container-desktop;
+  @include container;
+  @include padding-desktop;
   position: relative;
   display: flex;
   justify-content: space-between;

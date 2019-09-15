@@ -1,6 +1,9 @@
-@mixin container-desktop {
+@mixin container {
   max-width: 1366px;
   margin: 0 auto;
+}
+
+@mixin padding-desktop {
   padding-left: 45px;
   padding-right: 45px;
 }
@@ -38,10 +41,10 @@
   line-height: $line-height;
 }
 
-@mixin line {
-  position: absolute;
+@mixin line($width) {
   content: "";
-  width: 50px;
+  position: absolute;
+  width: $width;
   height: 1px;
   background-color: #8b8371;
 }

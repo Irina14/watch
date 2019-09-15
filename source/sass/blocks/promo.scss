@@ -1,10 +1,12 @@
 .promo {
   position: relative;
+  margin-bottom: 79px;
   background-color: $beige;
 }
 
 .promo__wrapper {
-  @include container-desktop;
+  @include container;
+  @include padding-desktop;
   display: flex;
 }
 
@@ -18,7 +20,7 @@
   position: relative;
   z-index: 20;
   width: 450px;
-  margin-right: 6%;
+  margin-right: 11%;
   margin-top: 147px;
   padding-left: 65px;
 }
@@ -28,7 +30,7 @@
   margin-bottom: 7px;
 
   &::before {
-    @include line;
+    @include line(50px);
     left: 0;
     top: 35px;
   }
@@ -67,7 +69,7 @@
 
 .promo_image {
   position: relative;
-  margin-top: -90px;
+  margin-top: -72px;
 }
 
 .promo__cost,
@@ -76,14 +78,14 @@
   position: absolute;
 
   &::before {
-    @include line;
+    @include line(50px);
     top: 10px;
   }
 }
 
 .promo__cost {
   top: 50px;
-  left: -70px;
+  left: -130px;
   padding-right: 61px;
 
   &::before {
@@ -92,8 +94,8 @@
 }
 
 .promo__dia {
-  bottom: 135px;
-  right: -145px;
+  bottom: 112px;
+  right: -130px;
   padding-left: 61px;
 
   &::before {
