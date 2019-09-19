@@ -1,18 +1,26 @@
 const slider = () => {
   $(document).ready(function () {
-    const sliderCounter = document.querySelector(`.advantages__slider-counter`);
+    $(`.advantages__slider`).slick(); // запуск слайдера Slick JQuery
 
-    $(`.advantages__slider`).slick();
+    // создание нового элемента - счетчика слайдера
+    const sliderAdvantages = document.querySelector(`.advantages__slider`);
+    const counter = document.createElement(`div`);
+    counter.classList.add(`advantages__slider-counter`);
+    counter.textContent = `01`;
+    sliderAdvantages.appendChild(counter);
 
+    // Событие после смены слайда Slick JQuery
     $(`.advantages__slider`).on(`afterChange`, function (slick) {
+      // Метод определения текущего слайда Slick JQuery
       let currentSlide = $(`.advantages__slider`).slick(`slickCurrentSlide`) + 1;
 
       if (currentSlide < 10) {
         currentSlide = `0` + currentSlide;
       }
 
-      sliderCounter.innerHTML = currentSlide;
+      counter.textContent = currentSlide;
     });
+
   });
 };
 

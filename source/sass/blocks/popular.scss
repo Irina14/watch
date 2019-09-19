@@ -126,6 +126,10 @@
 }
 
 @media (max-width: $desktop-width) {
+  .popular {
+    margin-bottom: 20px;
+  }
+
   .popular__list {
     flex-direction: column;
     align-items: center;
