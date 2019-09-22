@@ -14,6 +14,14 @@
   margin: 0;
   margin-right: 3.5%;
   margin-top: 257px;
+  flex-direction: column;
+  width: 20px;
+}
+
+.promo__social .social__item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
 .promo__info {
@@ -126,7 +134,8 @@
 }
 
 @media (max-width: $tablet-width) {
-  .promo__desc {
+  .promo__desc,
+  .promo__social.social {
     display: none;
   }
 

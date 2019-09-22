@@ -23,6 +23,7 @@
   position: relative;
   z-index: 10;
   padding: 52px;
+  padding-left: 13%;
 
   &::before {
     content: "";
@@ -48,6 +49,7 @@
 
 .advantages__title {
   @include text($playfair-display, 32px, 43px);
+  font-weight: 400;
   margin-bottom: 38px;
   color: $dark;
 }
@@ -117,6 +119,8 @@
 
 @media (max-width: $desktop-width) {
   .advantages__slider {
+    padding-left: 52px;
+
     &::before {
       background: none;
     }

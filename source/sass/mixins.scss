@@ -19,14 +19,6 @@
   list-style: none;
 }
 
-// @mixin title($font-size, $line-height, $color) {
-//   margin: 0;
-//   font-size: $font-size;
-//   line-height: $line-height;
-//   font-weight: 700;
-//   color: $color;
-// }
-
 @mixin reset-button {
   background-color: transparent;
   border: none;
