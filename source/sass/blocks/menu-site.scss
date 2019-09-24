@@ -12,6 +12,10 @@
 }
 
 .menu-site__item {
+  &--active .menu-site__link {
+    color: #a69876;
+  }
+
   &:not(:last-child) {
     margin-right: 9%;
   }
@@ -19,14 +23,12 @@
 
 .menu-site__link {
   color: $grey;
+}
 
+.menu-site__link[href] {
   &:hover,
   &:focus {
     color: $natural;
-  }
-
-  &--current {
-    color: #a69876;
   }
 }
 

@@ -1,5 +1,10 @@
 .header {
   position: relative;
+  margin-bottom: 23px;
+}
+
+.header.header--index {
+  margin-bottom: 0;
   background-color: $beige;
 
   &::before {

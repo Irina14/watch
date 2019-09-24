@@ -6,10 +6,33 @@
 
 .menu-user__item {
   margin-left: 20px;
+
+  & span {
+    display: none;
+  }
 }
 
 .header--index .menu-user {
   margin-left: auto;
+}
+
+.menu-user__item--fav {
+  position: relative;
+
+  & span {
+    @include text($roboto, 8px, 12px);
+    display: inline-block;
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 12px;
+    height: 12px;
+    text-align: center;
+    vertical-align: middle;
+    color: $black;
+    border-radius: 50%;
+    background-color: $natural;
+  }
 }
 
 @media (max-width: $tablet-width) {

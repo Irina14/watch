@@ -1,0 +1,48 @@
+.breadcrumbs {
+  @include container;
+  @include padding-desktop;
+}
+
+.breadcrumbs__list {
+  @include reset-list;
+  display: flex;
+}
+
+.breadcrumbs__item {
+  margin-right: 9px;
+  font-family: $roboto;
+  font-weight: 500;
+
+  &--active .breadcrumbs__link {
+    color: $grey;
+  }
+}
+
+.breadcrumbs__item:not(:last-child) {
+  position: relative;
+  padding-right: 15px;
+
+  &::after {
+    content: ">";
+    position: absolute;
+    right: 0;
+    color: #b3b3b3;
+  }
+}
+
+.breadcrumbs__link {
+  color: #b3b3b3;
+}
+
+.breadcrumbs__link[href] {
+  &:hover,
+  &:focus {
+    color: $natural;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .breadcrumbs {
+    @include padding-mobile;
+  }
+}
