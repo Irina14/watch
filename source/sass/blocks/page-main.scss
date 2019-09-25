@@ -1,0 +1,36 @@
+.page-main__breadcrumbs,
+.page-main__wrapper {
+  @include container;
+  @include padding-desktop;
+}
+
+.page-main__breadcrumbs {
+  margin-bottom: 40px;
+}
+
+.page-main__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-main__title {
+  @include text($playfair-display, 32px, 43px);
+  width: 60%;
+}
+
+@media (max-width: $tablet-width) {
+  .page-main__breadcrumbs,
+  .page-main__wrapper {
+    @include padding-mobile;
+  }
+
+  .page-main__wrapper {
+    display: block;
+  }
+
+  .page-main__title {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

@@ -1,8 +1,3 @@
-.breadcrumbs {
-  @include container;
-  @include padding-desktop;
-}
-
 .breadcrumbs__list {
   @include reset-list;
   display: flex;
@@ -38,11 +33,5 @@
   &:hover,
   &:focus {
     color: $natural;
-  }
-}
-
-@media (max-width: $tablet-width) {
-  .breadcrumbs {
-    @include padding-mobile;
   }
 }

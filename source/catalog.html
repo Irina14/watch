@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CONQUEST</title>
-  <link href="css/style.min.css" rel="stylesheet" />
+  <link href="css/style.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body>
 
@@ -51,8 +52,8 @@
     </div>
   </header>
 
-  <main>
-    <div class="breadcrumbs">
+  <main class="page-main">
+    <div class="page-main__breadcrumbs breadcrumbs">
       <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="index.html">Главная</a>
@@ -66,8 +67,33 @@
       </ul>
     </div>
 
+    <div class="page-main__wrapper">
+      <h1 class="page-main__title">Мужские часы</h1>
+      <div class="sort">
+        <div class="sort__label">
+          Сортировать по:
+          <div class="sort__select" tabindex="0">популярности</div>
+        </div>
+        <ul class="sort__list">
+          <li class="sort__option sort__option--active">
+            <a href="#">популярности</a>
+          </li>
+          <li class="sort__option">
+            <a href="#">стоимости</a>
+          </li>
+          <li class="sort__option">
+            <a href="#">новизне</a>
+          </li>
+          <li class="sort__option">
+            <a href="#">названию</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
   </main>
 
+  <script type="text/javascript" src="js/script.js"></script>
 
 </body>
 </html>

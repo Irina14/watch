@@ -1,27 +1,29 @@
 const slider = () => {
-  $(document).ready(function () {
-    $(`.advantages__slider`).slick(); // запуск слайдера Slick JQuery
+  const sliderAdvantages = document.querySelector(`.advantages__slider`);
 
-    // создание нового элемента - счетчика слайдера
-    const sliderAdvantages = document.querySelector(`.advantages__slider`);
-    const counter = document.createElement(`div`);
-    counter.classList.add(`advantages__slider-counter`);
-    counter.textContent = `01`;
-    sliderAdvantages.appendChild(counter);
+  if (sliderAdvantages) {
+    $(document).ready(function () {
+      $(`.advantages__slider`).slick(); // запуск слайдера Slick JQuery
 
-    // Событие после смены слайда Slick JQuery
-    $(`.advantages__slider`).on(`afterChange`, function (slick) {
-      // Метод определения текущего слайда Slick JQuery
-      let currentSlide = $(`.advantages__slider`).slick(`slickCurrentSlide`) + 1;
+      // создание нового элемента - счетчика слайдера
+      const counter = document.createElement(`div`);
+      counter.classList.add(`advantages__slider-counter`);
+      counter.textContent = `01`;
+      sliderAdvantages.appendChild(counter);
 
-      if (currentSlide < 10) {
-        currentSlide = `0` + currentSlide;
-      }
+      // Событие после смены слайда Slick JQuery
+      $(`.advantages__slider`).on(`afterChange`, function (slick) {
+        // Метод определения текущего слайда Slick JQuery
+        let currentSlide = $(`.advantages__slider`).slick(`slickCurrentSlide`) + 1;
 
-      counter.textContent = currentSlide;
+        if (currentSlide < 10) {
+          currentSlide = `0` + currentSlide;
+        }
+
+        counter.textContent = currentSlide;
+      });
     });
-
-  });
+  }
 };
 
 export default slider;

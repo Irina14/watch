@@ -1,0 +1,69 @@
+.sort {
+  @include text($roboto, 14px, 21px);
+  position: relative;
+}
+
+.sort--open .sort__select {
+  &::before {
+    top: 8px;
+    border-color: #bdb9b5;
+    transform: rotate(135deg);
+  }
+}
+
+.sort--open .sort__list {
+  display: block;
+}
+
+.sort__label {
+  display: flex;
+  align-items: center;
+  color: #bdb9b5;
+}
+
+.sort__list {
+  @include reset-list;
+  position: absolute;
+  left: 100px;
+  top: 30px;
+  display: none;
+  width: 130px;
+  padding: 15px;
+  background-color: rgba(253, 253, 251, 0.95);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.sort__select {
+  position: relative;
+  width: 130px;
+  padding: 0 15px 0 5px;
+  color: $dark;
+  border: none;
+  cursor: pointer;
+
+  &::before {
+    @include arrow(-45deg);
+    right: 5px;
+    top: 3px;
+    border-width: 0.5px;
+  }
+}
+
+.sort__option {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  & a {
+    color: #81807e;
+
+    &:hover,
+    &:focus {
+      color: $dark;
+    }
+  }
+
+  &--active {
+    display: none;
+  }
+}
