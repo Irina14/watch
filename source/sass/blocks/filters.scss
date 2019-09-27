@@ -1,0 +1,21 @@
+.filters {
+  width: 230px;
+  font-family: $roboto;
+}
+
+.filters__form fieldset {
+  margin-bottom: 35px;
+  border: none;
+}
+
+.filters__title {
+  margin-bottom: 27px;
+  font-weight: 500;
+  color: $color-btn;
+}
+
+.filters__form label {
+  font-size: 12px;
+  line-height: 0;
+  color: #6f6e6d;
+}

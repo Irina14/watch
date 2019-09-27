@@ -1,5 +1,6 @@
 .page-main__breadcrumbs,
-.page-main__wrapper {
+.page-main__wrapper,
+.page-main__content {
   @include container;
   @include padding-desktop;
 }
@@ -12,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .page-main__title {

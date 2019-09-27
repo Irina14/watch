@@ -1,0 +1,48 @@
+.ui-rangeSlider {
+  height: 1px;
+}
+
+.ui-rangeSlider .ui-rangeSlider-innerBar {
+  height: 1px;
+  background: #d4d4d4;
+}
+
+.ui-rangeSlider .ui-rangeSlider-handle {
+  top: -5px !important;
+  width: 10px;
+  height: 10px;
+  background-color: $white;
+  border: 1px solid $dark;
+  border-radius: 50%;
+  cursor: col-resize;
+}
+
+.ui-rangeSlider .ui-rangeSlider-bar {
+  background-color: $dark;
+  height: 1px;
+  cursor: move;
+}
+
+.ui-rangeSlider .ui-rangeSlider-bar.ui-draggable-dragging {
+  cursor: grabbing;
+}
+
+.ui-rangeSlider-arrow-inner {
+  display: none;
+}
+
+.ui-rangeSlider-container {
+  height: 1px;
+  margin: 0;
+}
+
+.ui-rangeSlider-label {
+  margin: 2px;
+  white-space: nowrap;
+  padding: 6px;
+  cursor: col-resize;
+}
+
+.ui-rangeSlider-label-inner {
+  display: none;
+}

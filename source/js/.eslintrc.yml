@@ -7,5 +7,6 @@ env:
   browser: true
   commonjs: true
   mocha: true
+  jquery: true
 
 extends: 'htmlacademy/es6'
