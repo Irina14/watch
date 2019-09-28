@@ -95,67 +95,73 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр поиска товара</h2>
         <form class="filters__form" action="#" method="get">
-          <fieldset class="filters__cost">
+          <fieldset class="filters__fieldset filters__fieldset--cost filters__fieldset--open">
             <legend class="filters__title">Стоимость</legend>
-            <div class="filters__slider"></div>
+            <div class="filters__content">
+              <div class="filters__slider"></div>
+            </div>
           </fieldset>
-          <fieldset class="filters__brands">
+          <fieldset class="filters__fieldset filters__fieldset--open">
               <legend class="filters__title">Бренд</legend>
-              <div class="filters__wrapper">
-                <input class="visually-hidden" type="checkbox" name="brand[]" id="techne" checked>
-                <label for="techne">Techne</label>
-              </div>
-              <div class="filters__wrapper">
-                <input class="visually-hidden" type="checkbox" name="brand[]" id="rado" checked>
-                <label for="rado">Rado</label>
-              </div>
-              <div class="filters__wrapper">
-                <input class="visually-hidden" type="checkbox" name="brand[]" id="bvlgari" checked>
-                <label for="bvlgari">Bvlgari</label>
-              </div>
-              <div class="filters__wrapper">
-                <input class="visually-hidden" type="checkbox" name="brand[]" id="tissot" checked>
-                <label for="tissot">Tissot</label>
-              </div>
-              <div class="filters__wrapper">
-                <input class="visually-hidden" type="checkbox" name="brand[]" id="omega" checked>
-                <label for="omega">Omega</label>
-              </div>
-              <div class="filters__wrapper">
-                <input class="visually-hidden" type="checkbox" name="brand[]" id="montblanc" checked>
-                <label for="montblanc">Montblanc</label>
+              <div class="filters__content">
+                  <div class="filters__wrapper">
+                    <input class="visually-hidden" type="checkbox" name="brand[]" id="techne">
+                    <label for="techne">Techne</label>
+                  </div>
+                  <div class="filters__wrapper">
+                    <input class="visually-hidden" type="checkbox" name="brand[]" id="rado">
+                    <label for="rado">Rado</label>
+                  </div>
+                  <div class="filters__wrapper">
+                    <input class="visually-hidden" type="checkbox" name="brand[]" id="bvlgari">
+                    <label for="bvlgari">Bvlgari</label>
+                  </div>
+                  <div class="filters__wrapper">
+                    <input class="visually-hidden" type="checkbox" name="brand[]" id="tissot">
+                    <label for="tissot">Tissot</label>
+                  </div>
+                  <div class="filters__wrapper">
+                    <input class="visually-hidden" type="checkbox" name="brand[]" id="omega">
+                    <label for="omega">Omega</label>
+                  </div>
+                  <div class="filters__wrapper">
+                    <input class="visually-hidden" type="checkbox" name="brand[]" id="montblanc">
+                    <label for="montblanc">Montblanc</label>
+                  </div>
               </div>
           </fieldset>
-          <fieldset class="filters__colors">
+          <fieldset class="filters__fieldset filters__fieldset--open">
               <legend class="filters__title">Цвет</legend>
-              <div class="filters__wrapper">
-                <input class="visually-hidden" type="checkbox" name="color[]" id="black" checked>
-                <label for="black">Черный</label>
-              </div>
-              <div class="filters__wrapper">
-                <input class="visually-hidden" type="checkbox" name="color[]" id="gray" checked>
-                <label for="gray">Серый</label>
-              </div>
-              <div class="filters__wrapper">
-                <input class="visually-hidden" type="checkbox" name="color[]" id="green" checked>
-                <label for="green">Зеленый</label>
-              </div>
-              <div class="filters__wrapper">
-                <input class="visually-hidden" type="checkbox" name="color[]" id="brown" checked>
-                <label for="brown">Коричневый</label>
+              <div class="filters__content">
+                  <div class="filters__wrapper">
+                    <input class="visually-hidden" type="checkbox" name="color[]" id="black">
+                    <label for="black">Черный</label>
+                  </div>
+                  <div class="filters__wrapper">
+                    <input class="visually-hidden" type="checkbox" name="color[]" id="gray">
+                    <label for="gray">Серый</label>
+                  </div>
+                  <div class="filters__wrapper">
+                    <input class="visually-hidden" type="checkbox" name="color[]" id="green">
+                    <label for="green">Зеленый</label>
+                  </div>
+                  <div class="filters__wrapper">
+                    <input class="visually-hidden" type="checkbox" name="color[]" id="brown">
+                    <label for="brown">Коричневый</label>
+                  </div>
               </div>
           </fieldset>
-          <button class="filters__button" type="reset">Сбросить фильтр</button>
+          <button class="filters__button button" type="reset">Сбросить фильтр</button>
         </form>
       </section>
     </div>
 
   </main>
 
-  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="js/jQRangeSlider.min.js"></script>
-  <script type="text/javascript" src="js/script.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+  <script src="js/jQRangeSlider.min.js"></script>
+  <script src="js/script.min.js"></script>
 
 </body>
 </html>

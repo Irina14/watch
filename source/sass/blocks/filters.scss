@@ -3,19 +3,120 @@
   font-family: $roboto;
 }
 
-.filters__form fieldset {
-  margin-bottom: 35px;
+.filters__fieldset {
+  position: relative;
+  margin: 0 0 20px;
+  padding: 0;
+  padding-right: 12px;
   border: none;
+
+  &:last-of-type {
+    margin-bottom: 35px;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 10px;
+    height: 1px;
+    background-color: $dark;
+  }
+
+  &::after {
+    transform: rotate(-90deg);
+  }
+}
+
+.filters__content {
+  display: none;
+}
+
+.filters__fieldset--open .filters__content {
+  display: block;
+}
+
+.filters__fieldset--open {
+  margin-bottom: 35px;
+
+  &::after {
+    display: none;
+  }
+}
+
+.filters__fieldset--open.filters__fieldset--cost {
+  margin-bottom: 45px;
+}
+
+.filters__fieldset--open .filters__title {
+  margin-bottom: 25px;
 }
 
 .filters__title {
-  margin-bottom: 27px;
   font-weight: 500;
   color: $color-btn;
 }
 
 .filters__form label {
+  padding-left: 29px;
   font-size: 12px;
   line-height: 0;
   color: #6f6e6d;
+  cursor: pointer;
+}
+
+.filters__wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.filters__wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.filters__wrapper input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #909090;
+}
+
+.filters__wrapper input[type="checkbox"]:checked + label {
+  &::before {
+    background-color: #6f6e6d;
+    border-color: #6f6e6d;
+  }
+
+  &::after {
+    @include arrow(-45deg);
+    left: 4px;
+    top: 5px;
+    width: 6px;
+    height: 4px;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.filters__wrapper input[type="checkbox"]:focus + label::before {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+.filters__button {
+  @include reset-button;
+  min-width: 230px;
+  height: 60px;
+  line-height: 60px;
+  border: 2px solid $natural;
+
+  &:hover,
+  &:focus {
+    background-color: $natural;
+  }
 }
