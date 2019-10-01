@@ -13,6 +13,16 @@
   &:last-of-type {
     margin-bottom: 35px;
   }
+}
+
+.filters__button {
+  @include reset-button;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  padding: 0;
 
   &::before,
   &::after {
@@ -30,6 +40,12 @@
   }
 }
 
+.filters__fieldset--open .filters__button {
+  &::after {
+    display: none;
+  }
+}
+
 .filters__content {
   display: none;
 }
@@ -40,10 +56,6 @@
 
 .filters__fieldset--open {
   margin-bottom: 35px;
-
-  &::after {
-    display: none;
-  }
 }
 
 .filters__fieldset--open.filters__fieldset--cost {
@@ -108,7 +120,7 @@
   outline: 5px auto -webkit-focus-ring-color;
 }
 
-.filters__button {
+.filters__button-reset {
   @include reset-button;
   min-width: 230px;
   height: 60px;

@@ -31,7 +31,8 @@ gulp.task("copy", function () {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/script.js",
-    "source/js/*.min.js"
+    "source/js/*.min.js",
+    "source/js/filters.php"
   ], {
       base: "source"
     })
