@@ -1,0 +1,106 @@
+.goods__list {
+  @include reset-list;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.goods__item {
+  width: 252px;
+  min-height: 316px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: $beige;
+
+  &:not(:nth-child(3n)) {
+    margin-right: 40px;
+  }
+
+  &--promo {
+    background-color: $natural;
+    padding-right: 0;
+    padding-left: 35px;
+  }
+}
+
+.goods__promo-text {
+  @include text($playfair-display, 16px, 24px);
+  width: 115px;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  & span {
+    font-size: 45px;
+    line-height: 0;
+  }
+}
+
+.goods__promo-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.goods__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.goods__info {
+  width: 65%;
+}
+
+.goods__title {
+  @include text($roboto, 14px, 21px);
+  margin-bottom: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $color-btn;
+}
+
+.goods__cost {
+  font-family: $roboto;
+  color: #636261;
+}
+
+.goods__button {
+  @include reset-button;
+  padding: 0;
+
+  &--fav {
+    margin-right: 16px;
+
+    &:hover path,
+    &:focus path {
+      stroke: #d75a4a;
+    }
+  }
+
+  &--basket {
+    &:hover path,
+    &:focus path {
+      fill: $natural;
+    }
+  }
+
+  &--fav-active path {
+    stroke: #d75a4a;
+  }
+
+  &--basket-active path {
+    fill: $natural;
+  }
+}
+
+.goods__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.goods__image {
+  margin: 0 auto;
+}

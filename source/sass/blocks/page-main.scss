@@ -5,6 +5,10 @@
   @include padding-desktop;
 }
 
+.page-main__content {
+  display: flex;
+}
+
 .page-main__breadcrumbs {
   margin-bottom: 40px;
 }
