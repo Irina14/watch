@@ -1,0 +1,58 @@
+.pagination__list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+}
+
+.pagination__item {
+  margin-right: 10px;
+
+  & a {
+    color: #b6b6b6;
+  }
+
+  & a[href]:hover,
+  & a[href]:focus {
+    color: $dark;
+  }
+
+  &--active a {
+    color: $dark;
+  }
+
+  &--prev {
+    margin-right: 14px;
+  }
+
+  &--next {
+    margin-left: 4px;
+    margin-right: 0;
+  }
+
+  &--prev a,
+  &--next a {
+    position: relative;
+    display: block;
+    width: 12px;
+    height: 12px;
+
+    &::before {
+      top: 2px;
+      border-width: 1px;
+    }
+  }
+
+  &--prev a {
+    &::before {
+      @include arrow(45deg);
+      left: 2px;
+    }
+  }
+
+  &--next a {
+    &::before {
+      @include arrow(-135deg);
+      right: 2px;
+    }
+  }
+}

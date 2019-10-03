@@ -2,23 +2,25 @@
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
+  margin-left: -40px;
 }
 
 .goods__item {
+  flex-grow: 1;
   width: 252px;
   min-height: 316px;
-  margin-bottom: 40px;
   padding: 20px;
   background-color: $beige;
-
-  &:not(:nth-child(3n)) {
-    margin-right: 40px;
-  }
+  margin-left: 40px;
 
   &--promo {
     background-color: $natural;
     padding-right: 0;
     padding-left: 35px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
   }
 }
 

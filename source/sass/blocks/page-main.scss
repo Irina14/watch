@@ -1,12 +1,14 @@
 .page-main__breadcrumbs,
 .page-main__wrapper,
-.page-main__content {
+.page-main__content,
+.page-main__pagination {
   @include container;
   @include padding-desktop;
 }
 
 .page-main__content {
   display: flex;
+  margin-bottom: 40px;
 }
 
 .page-main__breadcrumbs {
@@ -20,6 +22,12 @@
   margin-bottom: 40px;
 }
 
+.page-main__pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 78px;
+}
+
 .page-main__title {
   @include text($playfair-display, 32px, 43px);
   width: 60%;
@@ -27,7 +35,8 @@
 
 @media (max-width: $tablet-width) {
   .page-main__breadcrumbs,
-  .page-main__wrapper {
+  .page-main__wrapper,
+  .page-main__content {
     @include padding-mobile;
   }
 
@@ -38,5 +47,13 @@
   .page-main__title {
     width: 100%;
     margin-bottom: 20px;
+  }
+
+  .page-main__content {
+    display: block;
+  }
+
+  .page-main__pagination {
+    margin-bottom: 30px;
   }
 }

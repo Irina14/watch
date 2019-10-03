@@ -133,3 +133,10 @@
     background-color: $natural;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .filters {
+    margin-bottom: 30px;
+    margin-right: 0;
+  }
+}
