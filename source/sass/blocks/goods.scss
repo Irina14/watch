@@ -9,18 +9,15 @@
   flex-grow: 1;
   width: 252px;
   min-height: 316px;
+  margin-bottom: 40px;
+  margin-left: 40px;
   padding: 20px;
   background-color: $beige;
-  margin-left: 40px;
 
   &--promo {
     background-color: $natural;
     padding-right: 0;
     padding-left: 35px;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 40px;
   }
 }
 
@@ -105,4 +102,9 @@
 
 .goods__image {
   margin: 0 auto;
+}
+
+.goods__pagination {
+  display: flex;
+  justify-content: flex-end;
 }

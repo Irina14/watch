@@ -423,19 +423,37 @@
             </a>
           </li>
         </ul>
+        <div class="goods__pagination pagination">
+          <ul class="pagination__list">
+            <li class="pagination__item pagination__item--prev"><a aria-label="Назад"></a></li>
+            <li class="pagination__item pagination__item--active"><a>1</a></li>
+            <li class="pagination__item"><a href="#">2</a></li>
+            <li class="pagination__item"><a href="#">3</a></li>
+            <li class="pagination__item"><a>...</a></li>
+            <li class="pagination__item"><a href="#">12</a></li>
+            <li class="pagination__item pagination__item--next"><a href="#" aria-label="Вперед"></a></li>
+          </ul>
+        </div>
       </section>
     </div>
-    <div class="page-main__pagination pagination">
-      <ul class="pagination__list">
-        <li class="pagination__item pagination__item--prev"><a aria-label="Назад"></a></li>
-        <li class="pagination__item pagination__item--active"><a>1</a></li>
-        <li class="pagination__item"><a href="#">2</a></li>
-        <li class="pagination__item"><a href="#">3</a></li>
-        <li class="pagination__item"><a>...</a></li>
-        <li class="pagination__item"><a href="#">12</a></li>
-        <li class="pagination__item pagination__item--next"><a href="#" aria-label="Вперед"></a></li>
-      </ul>
-    </div>
+    <section class="mailing">
+      <div class="mailing__wrapper">
+        <h2 class="mailing__title">Подписка на рассылку</h2>
+        <div class="mailing__info">
+          <p class="mailing__text">
+            Получить скидку 10% на первую покупку
+          </p>
+          <form class="mailing__form" action="#" method="post">
+            <div class="mailing__wrapper-form">
+              <label class="mailing__label" for="email">E-mail</label>
+              <input class="mailing__email" type="email" name="email" id="email" required>
+            </div>
+            <button class="mailing__button button" type="submit">Подписаться</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>

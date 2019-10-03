@@ -1,14 +1,13 @@
 .page-main__breadcrumbs,
 .page-main__wrapper,
-.page-main__content,
-.page-main__pagination {
+.page-main__content {
   @include container;
   @include padding-desktop;
 }
 
 .page-main__content {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 78px;
 }
 
 .page-main__breadcrumbs {
@@ -20,12 +19,6 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 40px;
-}
-
-.page-main__pagination {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 78px;
 }
 
 .page-main__title {
@@ -51,9 +44,6 @@
 
   .page-main__content {
     display: block;
-  }
-
-  .page-main__pagination {
     margin-bottom: 30px;
   }
 }
