@@ -60,34 +60,24 @@ const filters = () => {
       $(`.filters__slider`).rangeSlider(`values`, ValueSlider.MIN_DEFAULT, ValueSlider.MAX_DEFAULT);
     });
 
-    // Функция для отправки данных фильтра на сервер
+    // Функция для отправки данных фильтра на сервер JQuery
     const sendData = () => {
       let dataForm = $(`.filters__form`).serialize();
       const dataFilters = `minCost=${minCost}&maxCost=${maxCost}&${dataForm}`;
       console.log(dataFilters);
       $.ajax({
-        url: `js/filters.php`,
+        url: `http://imbeloze.ru/filters.php`,
         data: dataFilters,
         type: `GET`,
         cache: false,
         dataType: `json`,
-        error: filtersError,
-        success(response) {
-          if (response.code === `success`) {
-            filtersSuccess(response);
-          } else {
-            filtersError(response);
-          }
+        error() {
+          console.log(`Ошибка`);
+        },
+        success() {
+          console.log(`Отправлено`);
         }
       });
-
-      const filtersError = (response) => {
-        console.error(`response`, response);
-      };
-
-      const filtersSuccess = (response) => {
-        console.log(response);
-      };
     };
   }
 };

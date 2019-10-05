@@ -107,27 +107,27 @@
               <button class="filters__button" type="button" aria-label="Открыть и закрыть"></button>
               <div class="filters__content">
                   <div class="filters__wrapper">
-                    <input class="visually-hidden" type="checkbox" name="brand[]" id="techne">
+                    <input class="visually-hidden" type="checkbox" name="techne" id="techne">
                     <label for="techne">Techne</label>
                   </div>
                   <div class="filters__wrapper">
-                    <input class="visually-hidden" type="checkbox" name="brand[]" id="rado">
+                    <input class="visually-hidden" type="checkbox" name="rado" id="rado">
                     <label for="rado">Rado</label>
                   </div>
                   <div class="filters__wrapper">
-                    <input class="visually-hidden" type="checkbox" name="brand[]" id="bvlgari">
+                    <input class="visually-hidden" type="checkbox" name="bvlgari" id="bvlgari">
                     <label for="bvlgari">Bvlgari</label>
                   </div>
                   <div class="filters__wrapper">
-                    <input class="visually-hidden" type="checkbox" name="brand[]" id="tissot">
+                    <input class="visually-hidden" type="checkbox" name="tissot" id="tissot">
                     <label for="tissot">Tissot</label>
                   </div>
                   <div class="filters__wrapper">
-                    <input class="visually-hidden" type="checkbox" name="brand[]" id="omega">
+                    <input class="visually-hidden" type="checkbox" name="omega" id="omega">
                     <label for="omega">Omega</label>
                   </div>
                   <div class="filters__wrapper">
-                    <input class="visually-hidden" type="checkbox" name="brand[]" id="montblanc">
+                    <input class="visually-hidden" type="checkbox" name="montblanc" id="montblanc">
                     <label for="montblanc">Montblanc</label>
                   </div>
               </div>
@@ -137,19 +137,19 @@
               <button class="filters__button" type="button" aria-label="Открыть и закрыть"></button>
               <div class="filters__content">
                   <div class="filters__wrapper">
-                    <input class="visually-hidden" type="checkbox" name="color[]" id="black">
+                    <input class="visually-hidden" type="checkbox" name="black" id="black">
                     <label for="black">Черный</label>
                   </div>
                   <div class="filters__wrapper">
-                    <input class="visually-hidden" type="checkbox" name="color[]" id="gray">
+                    <input class="visually-hidden" type="checkbox" name="gray" id="gray">
                     <label for="gray">Серый</label>
                   </div>
                   <div class="filters__wrapper">
-                    <input class="visually-hidden" type="checkbox" name="color[]" id="green">
+                    <input class="visually-hidden" type="checkbox" name="green" id="green">
                     <label for="green">Зеленый</label>
                   </div>
                   <div class="filters__wrapper">
-                    <input class="visually-hidden" type="checkbox" name="color[]" id="brown">
+                    <input class="visually-hidden" type="checkbox" name="brown" id="brown">
                     <label for="brown">Коричневый</label>
                   </div>
               </div>
@@ -281,7 +281,7 @@
                 <span>-20%</span>
                 На вторую позицию в чеке
               </p>
-              <img src="img/watch-promo.png" alt="Часы" width="90" height="300">
+              <img class="goods__promo-image" src="img/watch-promo.png" alt="Часы" width="90" height="300">
             </a>
           </li>
           <li class="goods__item">
@@ -447,14 +447,51 @@
             <div class="mailing__wrapper-form">
               <label class="mailing__label" for="email">E-mail</label>
               <input class="mailing__email" type="email" name="email" id="email" required>
+              <span class="mailing__message"></span>
             </div>
             <button class="mailing__button button" type="submit">Подписаться</button>
           </form>
         </div>
       </div>
     </section>
-
   </main>
+
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <div class="footer__contacts">
+        <img class="footer__logo" src="img/logo-footer.svg" width="130" height="34" alt="Логотип Conquest">
+        <a class="footer__phone" href="tel:+74994504797">8 (499) 450-47-97</a>
+        <a class="footer__email" href="mailto:info@conquest.watch.ru">info@conquest.watch.ru</a>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__title">о компании</h3>
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#">Наши магазины</a></li>
+          <li class="footer__item"><a href="#">Вакансии</a></li>
+          <li class="footer__item"><a href="#">Сертификаты</a></li>
+          <li class="footer__item"><a href="#">Отзывы</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__title">покупателям</h3>
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#">Каталог товаров</a></li>
+          <li class="footer__item"><a href="#">Как заказать?</a></li>
+          <li class="footer__item"><a href="#">FAQ</a></li>
+          <li class="footer__item"><a href="#">Корпоративным клиентам</a></li>
+        </ul>
+      </div>
+      <div class="footer__section">
+        <h3 class="footer__title">оплата и доставка</h3>
+        <ul class="footer__list">
+          <li class="footer__item"><a href="#">Способы оплаты</a></li>
+          <li class="footer__item"><a href="#">Время доставки</a></li>
+          <li class="footer__item"><a href="#">Гарантии и ремонт</a></li>
+          <li class="footer__item"><a href="#">Возврат и компенсация</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>

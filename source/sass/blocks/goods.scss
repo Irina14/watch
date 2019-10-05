@@ -24,6 +24,7 @@
 .goods__promo-text {
   @include text($playfair-display, 16px, 24px);
   width: 115px;
+  margin: auto;
   font-weight: bold;
   text-align: center;
   letter-spacing: 0.03em;
@@ -38,8 +39,12 @@
 
 .goods__promo-link {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+
+.goods__promo-image {
+  margin-left: auto;
 }
 
 .goods__wrapper {
