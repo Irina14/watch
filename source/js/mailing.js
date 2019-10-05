@@ -62,7 +62,7 @@ const mailing = () => {
     //   }
     // });
 
-    mailingForm.addEventListener(`submit`, (evt) => {
+    mailingButton.addEventListener(`click`, (evt) => {
       evt.preventDefault();
       validationForm();
     });
